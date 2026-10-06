@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Playing cards — DOM</title>
+    <link rel="stylesheet" href="cards.css">
+    <script src="cards.js" type="module"></script>
+</head>
+<body>
+    <main>
+        <h1>Playing cards</h1>
+        <p>Program the buttons to select the matching cards.</p>
+ 
+        <div class="controls" role="group" aria-label="Card selection">
+            <button id="select-ace-spade">A · Ace of spades</button>
+            <button id="select-hearts">B · Hearts</button>
+            <button id="select-red">C · Red cards</button>
+            <button id="select-face-cards">D · Face cards</button>
+            <button id="select-red-face-cards">E · Red face cards</button>
+            <button id="select-not-spades">F · All except spades</button>
+        </div>
+ 
+        <div class="deck" aria-label="Deck of 52 cards">
+            <playing-card id="HEART-ACE" class="ace heart">
+                <span class="rank">A</span>
+                <span class="suit">♥</span>
+            </playing-card>
+            <playing-card id="HEART-2" class="2 heart">
+                <span class="rank">2</span>
+                <span class="suit">♥</span>
+            </playing-card>
+            <playing-card id="HEART-3" class="3 heart">
+                <span class="rank">3</span>
+                <span class="suit">♥</span>
+            </playing-card>
+            <playing-card id="HEART-4" class="4 heart">
+                <span class="rank">4</span>
+                <span class="suit">♥</span>
+            </playing-card>
+            <playing-card id="HEART-5" class="5 heart">
+                <span class="rank">5</span>
+                <span class="suit">♥</span>
+            </playing-card>
+            <playing-card id="HEART-6" class="6 heart">
+                <span class="rank">6</span>
+                <span class="suit">♥</span>
+            </playing-card>
+            <playing-card id="HEART-7" class="7 heart">
+                <span class="rank">7</span>
+                <span class="suit">♥</span>
+            </playing-card>
+            <playing-card id="HEART-8" class="8 heart">
+                <span class="rank">8</span>
+                <span class="suit">♥</span>
+            </playing-card>
+            <playing-card id="HEART-9" class="9 heart">
+                <span class="rank">9</span>
+                <span class="suit">♥</span>
+            </playing-card>
+            <playing-card id="HEART-10" class="10 heart">
+                <span class="rank">10</span>
+                <span class="suit">♥</span>
+            </playing-card>
+            <playing-card id="HEART-JACK" class="jack heart" data-face-card>
+                <span class="rank">J</span>
+                <span class="suit">♥</span>
+            </playing-card>
+            <playing-card id="HEART-QUEEN" class="queen heart" data-face-card>
+                <span class="rank">Q</span>
+                <span class="suit">♥</span>
+            </playing-card>
+            <playing-card id="HEART-KING" class="king heart" data-face-card>
+                <span class="rank">K</span>
+                <span class="suit">♥</span>
+            </playing-card>
+            <playing-card id="SPADE-ACE" class="ace spade">
+                <span class="rank">A</span>
+                <span class="suit">♠</span>
+            </playing-card>
+            <playing-card id="SPADE-2" class="2 spade">
+                <span class="rank">2</span>
+                <span class="suit">♠</span>
+            </playing-card>
+            <playing-card id="SPADE-3" class="3 spade">
+                <span class="rank">3</span>
+                <span class="suit">♠</span>
+            </playing-card>
+            <playing-card id="SPADE-4" class="4 spade">
+                <span class="rank">4</span>
+                <span class="suit">♠</span>
+            </playing-card>
+            <playing-card id="SPADE-5" class="5 spade">
+                <span class="rank">5</span>
+                <span class="suit">♠</span>
+            </playing-card>
+            <playing-card id="SPADE-6" class="6 spade">
+                <span class="rank">6</span>
+                <span class="suit">♠</span>
+            </playing-card>
+            <playing-card id="SPADE-7" class="7 spade">
+                <span class="rank">7</span>
+                <span class="suit">♠</span>
+            </playing-card>
+            <playing-card id="SPADE-8" class="8 spade">
+                <span class="rank">8</span>
+                <span class="suit">♠</span>
+            </playing-card>
+            <playing-card id="SPADE-9" class="9 spade">
+                <span class="rank">9</span>
+                <span class="suit">♠</span>
+            </playing-card>
+            <playing-card id="SPADE-10" class="10 spade">
+                <span class="rank">10</span>
+                <span class="suit">♠</span>
+            </playing-card>
+            <playing-card id="SPADE-JACK" class="jack spade" data-face-card>
+                <span class="rank">J</span>
+                <span class="suit">♠</span>
+            </playing-card>
+            <playing-card id="SPADE-QUEEN" class="queen spade" data-face-card>
+                <span class="rank">Q</span>
+                <span class="suit">♠</span>
+            </playing-card>
+            <playing-card id="SPADE-KING" class="king spade" data-face-card>
+                <span class="rank">K</span>
+                <span class="suit">♠</span>
+            </playing-card>
+            <playing-card id="CLUB-ACE" class="ace club">
+                <span class="rank">A</span>
+                <span class="suit">♣</span>
+            </playing-card>
+            <playing-card id="CLUB-2" class="2 club">
+                <span class="rank">2</span>
+                <span class="suit">♣</span>
+            </playing-card>
+            <playing-card id="CLUB-3" class="3 club">
+                <span class="rank">3</span>
+                <span class="suit">♣</span>
+            </playing-card>
+            <playing-card id="CLUB-4" class="4 club">
+                <span class="rank">4</span>
+                <span class="suit">♣</span>
+            </playing-card>
+            <playing-card id="CLUB-5" class="5 club">
+                <span class="rank">5</span>
+                <span class="suit">♣</span>
+            </playing-card>
+            <playing-card id="CLUB-6" class="6 club">
+                <span class="rank">6</span>
+                <span class="suit">♣</span>
+            </playing-card>
+            <playing-card id="CLUB-7" class="7 club">
+                <span class="rank">7</span>
+                <span class="suit">♣</span>
+            </playing-card>
+            <playing-card id="CLUB-8" class="8 club">
+                <span class="rank">8</span>
+                <span class="suit">♣</span>
+            </playing-card>
+            <playing-card id="CLUB-9" class="9 club">
+                <span class="rank">9</span>
+                <span class="suit">♣</span>
+            </playing-card>
+            <playing-card id="CLUB-10" class="10 club">
+                <span class="rank">10</span>
+                <span class="suit">♣</span>
+            </playing-card>
+            <playing-card id="CLUB-JACK" class="jack club" data-face-card>
+                <span class="rank">J</span>
+                <span class="suit">♣</span>
+            </playing-card>
+            <playing-card id="CLUB-QUEEN" class="queen club" data-face-card>
+                <span class="rank">Q</span>
+                <span class="suit">♣</span>
+            </playing-card>
+            <playing-card id="CLUB-KING" class="king club" data-face-card>
+                <span class="rank">K</span>
+                <span class="suit">♣</span>
+            </playing-card>
+            <playing-card id="DIAMOND-ACE" class="ace diamond">
+                <span class="rank">A</span>
+                <span class="suit">♦</span>
+            </playing-card>
+            <playing-card id="DIAMOND-2" class="2 diamond">
+                <span class="rank">2</span>
+                <span class="suit">♦</span>
+            </playing-card>
+            <playing-card id="DIAMOND-3" class="3 diamond">
+                <span class="rank">3</span>
+                <span class="suit">♦</span>
+            </playing-card>
+            <playing-card id="DIAMOND-4" class="4 diamond">
+                <span class="rank">4</span>
+                <span class="suit">♦</span>
+            </playing-card>
+            <playing-card id="DIAMOND-5" class="5 diamond">
+                <span class="rank">5</span>
+                <span class="suit">♦</span>
+            </playing-card>
+            <playing-card id="DIAMOND-6" class="6 diamond">
+                <span class="rank">6</span>
+                <span class="suit">♦</span>
+            </playing-card>
+            <playing-card id="DIAMOND-7" class="7 diamond">
+                <span class="rank">7</span>
+                <span class="suit">♦</span>
+            </playing-card>
+            <playing-card id="DIAMOND-8" class="8 diamond">
+                <span class="rank">8</span>
+                <span class="suit">♦</span>
+            </playing-card>
+            <playing-card id="DIAMOND-9" class="9 diamond">
+                <span class="rank">9</span>
+                <span class="suit">♦</span>
+            </playing-card>
+            <playing-card id="DIAMOND-10" class="10 diamond">
+                <span class="rank">10</span>
+                <span class="suit">♦</span>
+            </playing-card>
+            <playing-card id="DIAMOND-JACK" class="jack diamond" data-face-card>
+                <span class="rank">J</span>
+                <span class="suit">♦</span>
+            </playing-card>
+            <playing-card id="DIAMOND-QUEEN" class="queen diamond" data-face-card>
+                <span class="rank">Q</span>
+                <span class="suit">♦</span>
+            </playing-card>
+            <playing-card id="DIAMOND-KING" class="king diamond" data-face-card>
+                <span class="rank">K</span>
+                <span class="suit">♦</span>
+            </playing-card>
+        </div>
+        <h2>Draw a hand</h2>
+        <div class="controls">
+            <button id="draw-hand">Draw a hand</button>
+        </div>
+        <div id="hand" class="hand" aria-label="Hand of five cards"></div>
+    </main>
+</body>
+</html>
+ 
